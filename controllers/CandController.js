@@ -48,9 +48,30 @@ candController.dogenForm = function(req, res, next) {
     var candidateDetail = new CandidateDetail(
       { title: req.body.title,
         user: req.user.id,
-        summary: req.body.summary,
-        noticeperiod: req.body.noticeperiod,
-	jobdesc: req.body.jobdesc
+        firstname: req.body.firstname,
+        middleName: req.body.middleName,
+	lastName: req.body.lastName,
+	company: req.body.company,
+	street1: req.body.street1,
+	street2: req.body.street2,
+	city: req.body.city,
+	state: req.body.state,
+	zip: req.body.zip,
+	country: req.body.country,
+	jobtitle: req.body.jobtitle,
+	jobcompany: req.body.jobcompany,
+	jobdivision: req.body.jobdivision,
+	jobctc: req.body.jobctc,
+	jobUSP: req.body.jobUSP,
+	jobnotis: req.body.jobnotis,
+	prefloc: req.body.prefloc,
+	prefcity: req.body.prefcity,
+	prefzip: req.body.prefzip,
+	stsskills: req.body.stsskills,
+	stsjob: req.body.stsjob,
+	stsreason: req.body.stsreason
+
+
        });
 
     console.log('CandidateDetail: '+candidateDetail);
