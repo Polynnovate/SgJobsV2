@@ -147,7 +147,10 @@ html(lang='en')
             p.centered
               a(href='profile.html')
                 img.img-circle(src='/jadeDash/img/ui-sam.jpg', width='60')
-            h5.centered Marcel Newman
+            if (!user)
+             h5.centered Marcel Newman
+            if (user)
+             h5.centered  #{user.name}
             li.mt
               a(href='index.html')
                 i.fa.fa-dashboard
@@ -229,57 +232,61 @@ html(lang='en')
                 form.form-horizontal.style-form(role='form',action='/candidateForm', method='post' )
                   .form-group                    
                     .col-sm-3
-                      h5.mb
+                      h6.mb
                          i.fa.fa-angle-right
                           |Tell Us About You
                   .form-group                    
-                    .col-sm-1
-                      label.col-sm-1.col-sm-2.control-label Title
+                    //.col-sm-1
+                      //label.col-sm-1.col-sm-2.control-label Title
                     .col-sm-2
                       input.form-control(type='text', name="title", placeholder='Title')
-                    .col-sm-1
-                      label.col-sm-1.col-sm-2.control-label UserId  
-                    .col-sm-4
-                      input.form-control(type='text', name="user", placeholder='UserId')                     
+                    //.col-sm-1
+                      //label.col-sm-1.col-sm-2.control-label UserId
+                    if (!user)   
+                     .col-sm-7
+                       input.form-control(type='text', name="user", placeholder='UserId')
+                    if (user)   
+                     .col-sm-7
+                       input.form-control(type='text',disabled, name="user",value = "#{user.id}", placeholder='UserId')                     
                   .form-group
-                    .col-sm-1
-                      label.col-sm-2.col-sm-2.control-label FirstName
+                    //.col-sm-1
+                      //label.col-sm-2.col-sm-2.control-label FirstName
                     .col-sm-3
-                      input.form-control.form-control(type='text', name="summary", placeholder='First Name')
-                    .col-sm-1
-                      label.col-sm-2.col-sm-2.control-label Middle Name
+                      input.form-control.form-control(type='text', name="firstname", placeholder='First Name')
+                    //.col-sm-1
+                      //label.col-sm-2.col-sm-2.control-label Middle Name
                     .col-sm-3
                       input.form-control.form-control(type='text', name="middleName", placeholder='Middle Name')
-                    .col-sm-1
-                      label.col-sm-2.col-sm-2.control-label Last Name		 	
+                    //.col-sm-1
+                      //label.col-sm-2.col-sm-2.control-label Last Name		 	
                     .col-sm-3
                       input.form-control.form-control(type='text', name="lastName", placeholder='Last Name')
                   .form-group
-                    .col-sm-1
-                      label.col-sm-2.col-sm-2.control-label Company
+                    //.col-sm-1
+                      //label.col-sm-2.col-sm-2.control-label Company
                     .col-sm-3
                       input.form-control.form-control(type='text', name="company", placeholder='Company')
-                    .col-sm-1
-                      label.col-sm-2.col-sm-2.control-label Street Address1
+                    //.col-sm-1
+                      //label.col-sm-2.col-sm-2.control-label Street Address1
                     .col-sm-3
                       input.form-control.form-control(type='text', name="street1", placeholder='Street 1')
-                    .col-sm-1
-                      label.col-sm-2.col-sm-2.control-label Street Address2		 	
+                    //.col-sm-1
+                      //label.col-sm-2.col-sm-2.control-label Street Address2		 	
                     .col-sm-3
-                      input.form-control.form-control(type='text', name="street2", placeholder='Stree 2')
+                      input.form-control.form-control(type='text', name="street2", placeholder='Street 2')
                   .form-group
-                    .col-sm-1
-                      label.col-sm-2.col-sm-1.control-label City
+                    //.col-sm-1
+                      //label.col-sm-2.col-sm-1.control-label City
                     .col-sm-3
                       input.form-control.form-control(type='text', name="city", placeholder='City')
-                    .col-sm-1
-                      label.col-sm-2.col-sm-1.control-label State
+                    //.col-sm-1
+                      //label.col-sm-2.col-sm-1.control-label State
                     .col-sm-2
                       input.form-control.form-control(type='text', name="state", placeholder='State')
                     .col-sm-2
                       input.form-control.form-control(type='text', name="zip", placeholder='Zip')
-                    .col-sm-1
-                      label.col-sm-2.col-sm-1.control-label Country		 	
+                    //.col-sm-1
+                      //label.col-sm-2.col-sm-1.control-label Country		 	
                     .col-sm-2
                       input.form-control.form-control(type='text', name="country", placeholder='country')
                   .form-group
@@ -288,47 +295,43 @@ html(lang='en')
                          i.fa.fa-angle-right
                           |Current
                   .form-group
-                    .col-sm-1
-                      label.col-sm-2.col-sm-1.control-label Job Title
+                    //.col-sm-1
+                      //label.col-sm-2.col-sm-1.control-label Job Title
                     .col-sm-3
                       input.form-control.form-control(type='text', name="jobtitle", placeholder='Job Title')
-                    .col-sm-1
-                      label.col-sm-2.col-sm-1.control-label Company
-                    .col-sm-3
+                    //.col-sm-1
+                      //label.col-sm-2.col-sm-1.control-label Company
+                    .col-sm-4
                       input.form-control.form-control(type='text', name="jobcompany", placeholder='Company')
-                    .col-sm-1
-                      label.col-sm-2.col-sm-1.control-label Division
-                    .col-sm-3
+                    .col-sm-2
                       input.form-control.form-control(type='text', name="jobdivision", placeholder='Division')
                   .form-group
                     .col-sm-1
                       label.col-sm-2.col-sm-1.control-label CTC
-                    .col-sm-3
-                      input.form-control.form-control(type='number', name="jobctc", placeholder=1000, min=1000, max=50000)
-                    .col-sm-1
-                      label.col-sm-2.col-sm-1.control-label USP
-                    .col-sm-4
-                      input.form-control.form-control(type='text', name="jobusp", placeholder='USP')
-                    .col-sm-1
-                      label.col-sm-2.col-sm-1.control-label NoticePeriod
                     .col-sm-2
-                      input.form-control.form-control(type='range', name="jobnoticeperiod", placeholder=1, min=1, max=6)
+                      input.form-control.form-control(type='number', name="jobctc", placeholder=1000, min=1000, max=50000)
+                    .col-sm-4
+                      input.form-control.form-control(type='text', name="jobUSP", placeholder='USP')
+                    .col-sm-2
+                      input.form-control.form-control(type='number', name="jobnotis", placeholder=1, min=1, max=12)
+                    .col-sm-1
+                      label.col-sm-2.col-sm-1.control-label(text-align ='left') Notice
                   .form-group
                     .col-sm-3
                       h5.mb
                          i.fa.fa-angle-right
                           |Preference
                   .form-group
-                    .col-sm-1
-                      label.col-sm-2.col-sm-1.control-label Location
+                    //.col-sm-1
+                      //label.col-sm-2.col-sm-1.control-label Location
                     .col-sm-3
                       input.form-control.form-control(type='text', name="prefloc", placeholder='Location')
-                    .col-sm-1
-                      label.col-sm-2.col-sm-1.control-label City
+                    //.col-sm-1
+                      //label.col-sm-2.col-sm-1.control-label City
                     .col-sm-3
                       input.form-control.form-control(type='text', name="prefcity", placeholder='City')
-                    .col-sm-1
-                      label.col-sm-2.col-sm-1.control-label ZIP
+                    //.col-sm-1
+                      //label.col-sm-2.col-sm-1.control-label ZIP
                     .col-sm-3
                       input.form-control.form-control(type='text', name="prefzip", placeholder='ZIP')
                   .form-group
@@ -337,21 +340,40 @@ html(lang='en')
                          i.fa.fa-angle-right
                           |Status
                   .form-group
-                    .col-sm-1
-                      label.col-sm-2.col-sm-1.control-label Skills
+                    //.col-sm-1
+                    //  label.col-sm-2.col-sm-1.control-label Skills
                     .col-sm-3
-                      input.form-control.form-control(type='text', name="stsskills", placeholder='Skill')
-                    .col-sm-1
-                      label.col-sm-2.col-sm-1.control-label Job
+                      select(multiple).form-control.form-control(type='select', name="stsskills")
+                       option(value='',selected ="True") Select Job Skills
+                       option(value='Skill1') Skill1
+                       option(value='Skill2') Skill2
+                       option(value='Skill3') Skill3
+                       option(value='Skill4') Skill4
+                    //.col-sm-1
+                    //  label.col-sm-2.col-sm-1.control-label Job
                     .col-sm-3
-                      input.form-control.form-control(type='text', name="stsjob", placeholder='Job Status')
-                    .col-sm-1
-                      label.col-sm-2.col-sm-1.control-label Reason
+                      select.form-control.form-control(type='select', name="stsjob")
+                       option(value='',selected ="True") Job Status
+                       option(value='Status1',selected ="False") Status1
+                       option(value='Status2',selected ="False") Status2
+                       option(value='Status3',selected ="False") Status3
+                       option(value='Status4',selected ="False") Status4
+                    //.col-sm-1
+                    //  label.col-sm-2.col-sm-1.control-label Reason
                     .col-sm-3
-                      select(multiple).form-control.form-control(type='select', name="stsreason", placeholder='Reason for leaving')
-                       option( value="" , selected ="True") Reason for leaving 
-                       option( value="UnKnown" ) UnKnown
-                       option( value="UnKnown") Known
+                      select.form-control.form-control(type='select', name="stsreason")
+                       option(value='',selected ="True") Reason for leaving
+                       option(value='Reason1',selected ="False") Reason1 for leaving
+                       option(value='Reason2',selected ="False") Reason2 for leaving
+                       option(value='Reason3',selected ="False") Reason3 for leaving
+                       option(value='Reason4',selected ="False") Reason4 for leaving
+
+                     //input.form-control.form-control(type='option', name='stsre', placeholder='Rn for')
+                     //input.form-control.form-control(type='option' id="xxx", name="xxxyyy")
+                     //   -for(var i = 1;i<10;i++){
+                     //   option(value="#{i}") Some value for #{i}
+                     //   -}
+                     
                   button.btn.btn-theme(type='submit') Ok
             // col-lg-12
           // /row
@@ -399,4 +421,3 @@ html(lang='en')
       $(function(){
       $('select.styled').customSelect();
       });
-
