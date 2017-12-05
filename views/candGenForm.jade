@@ -1,0 +1,402 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='')
+    meta(name='author', content='Dashboard')
+    meta(name='keyword', content='Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina')
+    title JobsV2 General Form
+    // Bootstrap core CSS
+    link(href='/jadeDash/css/bootstrap.css', rel='stylesheet')
+    // external css
+    link(href='/jadeDash/font-awesome/css/font-awesome.css', rel='stylesheet')
+    link(rel='stylesheet', type='text/css', href='/jadeDash/css/datepicker.css')
+    link(rel='stylesheet', type='text/css', href='/jadeDash/css/daterangepicker.css')
+    // Custom styles for this template
+    link(href='/jadeDash/css/style.css', rel='stylesheet')
+    link(href='/jadeDash/css/style-responsive.css', rel='stylesheet')
+    // HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    //if lt IE 9
+      script(src='/jadeDash/js/html5shiv.js')
+      script(src='/jadeDash/js/respond.min.js')
+  body
+    section#container
+      //
+        **********************************************************************************************************************************************************
+        TOP BAR CONTENT & NOTIFICATIONS
+        ***********************************************************************************************************************************************************
+      // header start
+      header.header.black-bg
+        .sidebar-toggle-box
+          .fa.fa-bars.tooltips(data-placement='right', data-original-title='Toggle Navigation')
+        // logo start
+        a.logo(href='/')
+          b JobsV2
+        // logo end
+        #top_menu.nav.notify-row
+          // notification start
+          ul.nav.top-menu
+            // settings start
+            li.dropdown
+              a.dropdown-toggle(data-toggle='dropdown', href='index.html#')
+                i.fa.fa-tasks
+                span.badge.bg-theme 4
+              ul.dropdown-menu.extended.tasks-bar
+                .notify-arrow.notify-arrow-green
+                li
+                  p.green You have 4 pending tasks
+                li
+                  a(href='index.html#')
+                    .task-info
+                      .desc DashGum Admin Panel
+                      .percent 40%
+                    .progress.progress-striped
+                      .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100', style='width: 40%')
+                        span.sr-only 40% Complete (success)
+                li
+                  a(href='index.html#')
+                    .task-info
+                      .desc Database Update
+                      .percent 60%
+                    .progress.progress-striped
+                      .progress-bar.progress-bar-warning(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 60%')
+                        span.sr-only 60% Complete (warning)
+                li
+                  a(href='index.html#')
+                    .task-info
+                      .desc Product Development
+                      .percent 80%
+                    .progress.progress-striped
+                      .progress-bar.progress-bar-info(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%')
+                        span.sr-only 80% Complete
+                li
+                  a(href='index.html#')
+                    .task-info
+                      .desc Payments Sent
+                      .percent 70%
+                    .progress.progress-striped
+                      .progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='70', aria-valuemin='0', aria-valuemax='100', style='width: 70%')
+                        span.sr-only 70% Complete (Important)
+                li.external
+                  a(href='#') See All Tasks
+            // settings end
+            // inbox dropdown start
+            li#header_inbox_bar.dropdown
+              a.dropdown-toggle(data-toggle='dropdown', href='index.html#')
+                i.fa.fa-envelope-o
+                span.badge.bg-theme 5
+              ul.dropdown-menu.extended.inbox
+                .notify-arrow.notify-arrow-green
+                li
+                  p.green You have 5 new messages
+                li
+                  a(href='index.html#')
+                    span.photo
+                      img(alt='avatar', src='/jadeDash/img/ui-zac.jpg')
+                    span.subject
+                      span.from Zac Snider
+                      span.time Just now
+                    span.message
+                      | Hi mate, how is everything?
+                li
+                  a(href='index.html#')
+                    span.photo
+                      img(alt='avatar', src='/jadeDash/img/ui-divya.jpg')
+                    span.subject
+                      span.from Divya Manian
+                      span.time 40 mins.
+                    span.message
+                      | Hi, I need your help with this.
+                li
+                  a(href='index.html#')
+                    span.photo
+                      img(alt='avatar', src='/jadeDash/img/ui-danro.jpg')
+                    span.subject
+                      span.from Dan Rogers
+                      span.time 2 hrs.
+                    span.message
+                      | Love your new Dashboard.
+                li
+                  a(href='index.html#')
+                    span.photo
+                      img(alt='avatar', src='/jadeDash/img/ui-sherman.jpg')
+                    span.subject
+                      span.from Dj Sherman
+                      span.time 4 hrs.
+                    span.message
+                      | Please, answer asap.
+                li
+                  a(href='index.html#') See all messages
+            // inbox dropdown end
+          // notification end
+        .top-menu
+          ul.nav.pull-right.top-menu
+            li
+              a.logout(href='login.html') Logout
+      // header end
+      //
+        **********************************************************************************************************************************************************
+        MAIN SIDEBAR MENU
+        ***********************************************************************************************************************************************************
+      // sidebar start
+      aside
+        #sidebar.nav-collapse
+          // sidebar menu start
+          ul#nav-accordion.sidebar-menu
+            p.centered
+              a(href='profile.html')
+                img.img-circle(src='/jadeDash/img/ui-sam.jpg', width='60')
+            h5.centered Marcel Newman
+            li.mt
+              a(href='index.html')
+                i.fa.fa-dashboard
+                span Dashboard
+            li.sub-menu
+              a(href='javascript:;')
+                i.fa.fa-desktop
+                span UI Elements
+              ul.sub
+                li
+                  a(href='general.html') General
+                li
+                  a(href='buttons.html') Buttons
+                li
+                  a(href='panels.html') Panels
+            li.sub-menu
+              a(href='javascript:;')
+                i.fa.fa-cogs
+                span Components
+              ul.sub
+                li
+                  a(href='calendar.html') Calendar
+                li
+                  a(href='gallery.html') Gallery
+                li
+                  a(href='todo_list.html') Todo List
+            li.sub-menu
+              a(href='javascript:;')
+                i.fa.fa-book
+                span Extra Pages
+              ul.sub
+                li
+                  a(href='blank.html') Blank Page
+                li
+                  a(href='login.html') Login
+                li
+                  a(href='lock_screen.html') Lock Screen
+            li.sub-menu
+              a.active(href='javascript:;')
+                i.fa.fa-tasks
+                span Forms
+              ul.sub
+                li.active
+                  a(href='form_component.html') Form Components
+            li.sub-menu
+              a(href='javascript:;')
+                i.fa.fa-th
+                span Data Tables
+              ul.sub
+                li
+                  a(href='basic_table.html') Basic Table
+                li
+                  a(href='responsive_table.html') Responsive Table
+            li.sub-menu
+              a(href='javascript:;')
+                i.fa.fa-bar-chart-o
+                span Charts
+              ul.sub
+                li
+                  a(href='morris.html') Morris
+                li
+                  a(href='chartjs.html') Chartjs
+          // sidebar menu end
+      // sidebar end
+      //
+        **********************************************************************************************************************************************************
+        MAIN CONTENT
+        ***********************************************************************************************************************************************************
+      // main content start
+      section#main-content
+        section.wrapper
+          h3
+            i.fa.fa-angle-right
+            |  Profile
+          // BASIC FORM ELELEMNTS
+          .row.mt
+            .col-lg-12
+              .form-panel
+                form.form-horizontal.style-form(role='form',action='/candidateForm', method='post' )
+                  .form-group                    
+                    .col-sm-3
+                      h5.mb
+                         i.fa.fa-angle-right
+                          |Tell Us About You
+                  .form-group                    
+                    .col-sm-1
+                      label.col-sm-1.col-sm-2.control-label Title
+                    .col-sm-2
+                      input.form-control(type='text', name="title", placeholder='Title')
+                    .col-sm-1
+                      label.col-sm-1.col-sm-2.control-label UserId  
+                    .col-sm-4
+                      input.form-control(type='text', name="user", placeholder='UserId')                     
+                  .form-group
+                    .col-sm-1
+                      label.col-sm-2.col-sm-2.control-label FirstName
+                    .col-sm-3
+                      input.form-control.form-control(type='text', name="summary", placeholder='First Name')
+                    .col-sm-1
+                      label.col-sm-2.col-sm-2.control-label Middle Name
+                    .col-sm-3
+                      input.form-control.form-control(type='text', name="middleName", placeholder='Middle Name')
+                    .col-sm-1
+                      label.col-sm-2.col-sm-2.control-label Last Name		 	
+                    .col-sm-3
+                      input.form-control.form-control(type='text', name="lastName", placeholder='Last Name')
+                  .form-group
+                    .col-sm-1
+                      label.col-sm-2.col-sm-2.control-label Company
+                    .col-sm-3
+                      input.form-control.form-control(type='text', name="company", placeholder='Company')
+                    .col-sm-1
+                      label.col-sm-2.col-sm-2.control-label Street Address1
+                    .col-sm-3
+                      input.form-control.form-control(type='text', name="street1", placeholder='Street 1')
+                    .col-sm-1
+                      label.col-sm-2.col-sm-2.control-label Street Address2		 	
+                    .col-sm-3
+                      input.form-control.form-control(type='text', name="street2", placeholder='Stree 2')
+                  .form-group
+                    .col-sm-1
+                      label.col-sm-2.col-sm-1.control-label City
+                    .col-sm-3
+                      input.form-control.form-control(type='text', name="city", placeholder='City')
+                    .col-sm-1
+                      label.col-sm-2.col-sm-1.control-label State
+                    .col-sm-2
+                      input.form-control.form-control(type='text', name="state", placeholder='State')
+                    .col-sm-2
+                      input.form-control.form-control(type='text', name="zip", placeholder='Zip')
+                    .col-sm-1
+                      label.col-sm-2.col-sm-1.control-label Country		 	
+                    .col-sm-2
+                      input.form-control.form-control(type='text', name="country", placeholder='country')
+                  .form-group
+                    .col-sm-3
+                      h5.mb
+                         i.fa.fa-angle-right
+                          |Current
+                  .form-group
+                    .col-sm-1
+                      label.col-sm-2.col-sm-1.control-label Job Title
+                    .col-sm-3
+                      input.form-control.form-control(type='text', name="jobtitle", placeholder='Job Title')
+                    .col-sm-1
+                      label.col-sm-2.col-sm-1.control-label Company
+                    .col-sm-3
+                      input.form-control.form-control(type='text', name="jobcompany", placeholder='Company')
+                    .col-sm-1
+                      label.col-sm-2.col-sm-1.control-label Division
+                    .col-sm-3
+                      input.form-control.form-control(type='text', name="jobdivision", placeholder='Division')
+                  .form-group
+                    .col-sm-1
+                      label.col-sm-2.col-sm-1.control-label CTC
+                    .col-sm-3
+                      input.form-control.form-control(type='number', name="jobctc", placeholder=1000, min=1000, max=50000)
+                    .col-sm-1
+                      label.col-sm-2.col-sm-1.control-label USP
+                    .col-sm-4
+                      input.form-control.form-control(type='text', name="jobusp", placeholder='USP')
+                    .col-sm-1
+                      label.col-sm-2.col-sm-1.control-label NoticePeriod
+                    .col-sm-2
+                      input.form-control.form-control(type='range', name="jobnoticeperiod", placeholder=1, min=1, max=6)
+                  .form-group
+                    .col-sm-3
+                      h5.mb
+                         i.fa.fa-angle-right
+                          |Preference
+                  .form-group
+                    .col-sm-1
+                      label.col-sm-2.col-sm-1.control-label Location
+                    .col-sm-3
+                      input.form-control.form-control(type='text', name="prefloc", placeholder='Location')
+                    .col-sm-1
+                      label.col-sm-2.col-sm-1.control-label City
+                    .col-sm-3
+                      input.form-control.form-control(type='text', name="prefcity", placeholder='City')
+                    .col-sm-1
+                      label.col-sm-2.col-sm-1.control-label ZIP
+                    .col-sm-3
+                      input.form-control.form-control(type='text', name="prefzip", placeholder='ZIP')
+                  .form-group
+                    .col-sm-3
+                      h5.mb
+                         i.fa.fa-angle-right
+                          |Status
+                  .form-group
+                    .col-sm-1
+                      label.col-sm-2.col-sm-1.control-label Skills
+                    .col-sm-3
+                      input.form-control.form-control(type='text', name="stsskills", placeholder='Skill')
+                    .col-sm-1
+                      label.col-sm-2.col-sm-1.control-label Job
+                    .col-sm-3
+                      input.form-control.form-control(type='text', name="stsjob", placeholder='Job Status')
+                    .col-sm-1
+                      label.col-sm-2.col-sm-1.control-label Reason
+                    .col-sm-3
+                      select(multiple).form-control.form-control(type='select', name="stsreason", placeholder='Reason for leaving')
+                       option( value="" , selected ="True") Reason for leaving 
+                       option( value="UnKnown" ) UnKnown
+                       option( value="UnKnown") Known
+                  button.btn.btn-theme(type='submit') Ok
+            // col-lg-12
+          // /row
+          // INLINE FORM ELELEMNTS
+          .row.mt
+            .col-lg-12
+              .form-panel
+         
+          .row.mt
+            .col-lg-12
+              .form-panel
+          .row.mt
+            .col-lg-12
+              .form-panel
+         
+      // footer start
+      footer.site-footer
+        .text-center
+          | 2014 - Alvarez.is
+          a.go-top(href='form_component.html#')
+            i.fa.fa-angle-up
+      // footer end
+    // js placed at the end of the document so the pages load faster
+    script(src='/jadeDash/js/jquery.js')
+    script(src='/jadeDash/js/bootstrap.min.js')
+    script.include(type='text/javascript', src='/jadeDash/js/jquery.dcjqaccordion.2.7.js')
+    script(src='/jadeDash/js/jquery.scrollTo.min.js')
+    script(src='/jadeDash/js/jquery.nicescroll.js', type='text/javascript')
+    // common script for all pages
+    script(src='/jadeDash/js/common-scripts.js')
+    // script for this page
+    script(src='/jadeDash/js/jquery-ui-1.9.2.custom.min.js')
+    // custom switch
+    script(src='/jadeDash/js/bootstrap-switch.js')
+    // custom tagsinput
+    script(src='/jadeDash/js/jquery.tagsinput.js')
+    // custom checkbox & radio
+    script(type='text/javascript', src='/jadeDash/js/bootstrap-datepicker.js')
+    script(type='text/javascript', src='/jadeDash/js/date.js')
+    script(type='text/javascript', src='/jadeDash/js/daterangepicker.js')
+    script(type='text/javascript', src='/jadeDash/js/bootstrap-inputmask.min.js')
+    script(src='/jadeDash/js/form-component.js')
+    script.
+      //custom select box
+      $(function(){
+      $('select.styled').customSelect();
+      });
+

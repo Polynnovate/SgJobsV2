@@ -1,0 +1,111 @@
+extends layoutCand
+block content 
+ link(href=`/bootstrap-3.3.7/css/carousel.css`, rel='stylesheet')
+ // Carousel
+    // ==================================================
+ #myCarousel.carousel.slide(data-ride='carousel')
+      // Indicators
+      ol.carousel-indicators
+        li.active(data-target='#myCarousel', data-slide-to='0')
+        li(data-target='#myCarousel', data-slide-to='1')
+        li(data-target='#myCarousel', data-slide-to='2')
+      .carousel-inner
+        .item.active
+          img(src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', alt='First slide')
+          .container
+            .carousel-caption
+              h1 Example headline.
+              p
+                | Note: If you&apos;re viewing this page via a 
+                code file://
+                |  URL, the &quot;next&quot; and &quot;previous&quot; Glyphicon buttons on the left 
+              p
+                a.btn.btn-lg.btn-primary(href='#', role='button') Sign up today
+        .item
+          img(src='data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', alt='Second slide')
+          .container
+            .carousel-caption
+              h1 Another example headline.
+              p
+                | Cras justo odio, dapibus ac facilisis in, e
+              p
+                a.btn.btn-lg.btn-primary(href='#', role='button') Learn more
+        .item
+          img(src='data:image/gif;base64,R0lGODlhAQABAIAAAFVVVQAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', alt='Third slide')
+          .container
+            .carousel-caption
+              h1 One more for good measure.
+              p
+                | Cras justo odio, dapibus ac f
+              p
+                a.btn.btn-lg.btn-primary(href='#', role='button') Browse gallery
+      a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
+        span.glyphicon.glyphicon-chevron-left
+      a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
+        span.glyphicon.glyphicon-chevron-right
+      // /.carousel
+      .container.marketing 	
+       .row
+        .col-lg-4
+          img.img-circle(src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', alt='Generic placeholder image', style='width: 140px; height: 140px;')
+          h2 Heading
+          p
+            | Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, 
+          p
+            a.btn.btn-default(href='#', role='button') View details &raquo;
+        .col-lg-4
+          img.img-circle(src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', alt='Generic placeholder image', style='width: 140px; height: 140px;')
+          h2 Heading
+          p
+            | Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, 
+          p
+            a.btn.btn-default(href='#', role='button') View details &raquo;
+        .col-lg-4
+          img.img-circle(src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', alt='Generic placeholder image', style='width: 140px; height: 140px;')
+          h2 Heading
+          p
+            | Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, 
+          p
+            a.btn.btn-default(href='#', role='button') View details &raquo;
+      hr.featurette-divider
+      .row.featurette
+        .col-md-7
+          h2.featurette-heading
+            | First featurette heading. 
+            span.text-muted It&apos;ll blow your mind.
+          p.lead
+            | Donec ullamcorper nulla non metus auctor fringilla. 
+        .col-md-5
+          img.featurette-image.img-responsive(data-src='holder.js/500x500/auto', alt='Generic placeholder image')
+      hr.featurette-divider
+      .row.featurette
+        .col-md-5
+          img.featurette-image.img-responsive(data-src='holder.js/500x500/auto', alt='Generic placeholder image')
+        .col-md-7
+          h2.featurette-heading
+            | Oh yeah, it&apos;s that good. 
+            span.text-muted See for yourself.
+          p.lead
+            | Donec ullamcorper nulla non metus auctor fringilla. 
+      hr.featurette-divider
+      .row.featurette
+        .col-md-7
+          h2.featurette-heading
+            | And lastly, this one. 
+            span.text-muted Checkmate.
+          p.lead
+            | Donec ullamcorper nulla non metus auctor fringilla. 
+        .col-md-5
+          img.featurette-image.img-responsive(data-src='holder.js/500x500/auto', alt='Generic placeholder image')
+      hr.featurette-divider
+      footer
+        p.pull-right
+          a(href='#') Back to top
+        p
+          | &copy; 2014 Company, Inc. &middot; 
+          a(href='#') Privacy
+          |  &middot; 
+          a(href='#') Terms
+ script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+ script(src=`/bootstrap-3.3.7/js/bootstrap.min.js`)
+ script(src=`/bootstrap-3.3.7/js/holder.js`)
